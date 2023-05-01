@@ -1,0 +1,79 @@
+/* * {
+    outline: 1px solid black !important;
+    box-sizing: border-box;
+
+} */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "navbar-main navbar-main navbar-main"
+        "body-main body-main body-main"
+        "body-main body-main body-main"
+        "body-main body-main body-main"
+        "body-main body-main body-main";
+
+    width: auto;
+    height: auto;
+}
+
+.navbar-main {
+    grid-area: navbar-main;
+}
+
+.body-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 4fr 4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "title title title"
+        "content-main content-main content-main"
+        "content-main content-main content-main";
+    grid-area: body-main;
+}
+
+.title {
+    grid-area: title;
+}
+
+.content-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.1fr 0.9fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "content-spring content-summer content-summer"
+        "content-spring content-summer content-summer"
+        "content-spring content-summer content-summer";
+    grid-area: content-main;
+}
+
+.content-spring {
+    grid-area: content-spring;
+}
+
+.content-summer {
+    grid-area: content-summer;
+}
+
+p {
+    font-family: 'Instrument Serif', serif;
+    font-family: 'Poltawski Nowy', serif;
+    font-size: larger
+}
+
+h1,
+h4 {
+    font-family: 'Instrument Serif', serif;
+}
+
+h1 {
+    font-size: 60px;
+}
